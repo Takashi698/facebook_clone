@@ -1,6 +1,7 @@
-<h1>Editing Picture</h1>
-
-<%= render 'form', picture: @picture %>
-
-<%= link_to 'Show', @picture %> |
-<%= link_to 'Back', pictures_path %>
+<h1>Edit Post</h1>
+<%= render 'form', posting_page: @posting_page %>
+<div class="link_button1">
+  <%= link_to 'Show', @posting_page %>
+  <br>
+  <%= link_to 'Back', posting_pages_path %>
+</div>
