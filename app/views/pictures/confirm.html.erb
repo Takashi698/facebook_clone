@@ -2,9 +2,8 @@
 <br>
 <h3 id="message">以下の内容でツイートする。</h3>
 <%= form_with(model: @picture, url: pictures_path, local: true) do |form| %>
-  <p>User: <%= current_user.name %></p>
+  <p>User: <%= @picture.user.name %></p>
   <%= form.hidden_field :content %>
-  <% binding.irb %>
   <p>Content: <%= @picture.content %></p>
   <%= form.hidden_field :image_cache %>
   <p>Image: <%= image_tag(@picture.image.url) if @picture.image && @picture.image.url %></p>
